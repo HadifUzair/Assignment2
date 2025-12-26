@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile - CSC584</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Personal Profile Form</h1>
+            <p>Please fill in your details below:</p>
+            
+<!--            Servlet post here-->
+            <form action="ProfileServlet" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="program">Program:</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select Program</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Multimedia Computing">Multimedia Computing</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Netcentric Computing">Netcentric Computing</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hobbies">Hobbies:</label>
+                    <textarea id="hobbies" name="hobbies" rows="3" 
+                              placeholder="e.g., Reading, Gaming, Sports, Music..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="introduction">Self Introduction:</label>
+                    <textarea id="introduction" name="introduction" rows="5" 
+                              placeholder="Tell us about yourself..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit Profile</button>
+                    <button type="reset" class="reset-btn">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
